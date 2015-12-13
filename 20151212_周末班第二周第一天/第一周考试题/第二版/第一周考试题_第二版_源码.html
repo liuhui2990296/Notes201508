@@ -6,19 +6,19 @@
 </head>
 <body>
 
-<input type="button"/>
-<input type="button"/>
-<input type="button"/>
-<script type="text/javascript">
-var inpList = document.getElementsByTagName("input");
-var ary = ["red", "green", "orange"];
-for (var i = 0; i < inpList.length; i++) {
-    var cur = inpList[i];
-    cur.onmouseover = function () {
-        document.body.style.backgroundColor = ary[i];
-    }
-}
-</script>
+<!--<input type="button"/>-->
+<!--<input type="button"/>-->
+<!--<input type="button"/>-->
+<!--<script type="text/javascript">-->
+<!--//var inpList = document.getElementsByTagName("input");-->
+<!--//var ary = ["red", "green", "orange"];-->
+<!--//for (var i = 0; i < inpList.length; i++) {-->
+<!--//    var cur = inpList[i];-->
+<!--//    cur.onmouseover = function () {-->
+<!--//        document.body.style.backgroundColor = ary[i];-->
+<!--//    }-->
+<!--//}-->
+<!--</script>-->
 
 
 
@@ -69,19 +69,19 @@ for (var i = 0; i < inpList.length; i++) {
     //f(4);
     //fn()(4);
 
-    ////第5题:
-    //var num = 1;  var obj = {num: 2};
-    //obj.fn = (function (num) {
-    //    this.num = num * 2;
-    //    num++;
-    //    return function (n) {
-    //        this.num += n;
-    //        num++;
-    //        console.log(num);
-    //    }
-    //})(obj.num);
-    //var fn = obj.fn;  fn(10);  obj.fn(20);
-    //console.log(num, obj.num);
+    //第5题:
+    var num = 1;  var obj = {num: 2};
+    obj.fn = (function (num) {
+        this.num = num * 2;
+        num++;
+        return function (n) {
+            this.num += n;
+            num++;
+            console.log(num);
+        }
+    })(obj.num);
+    var fn = obj.fn;  fn(10);  obj.fn(20);
+//    console.log(num, obj.num);
 
     //    //第6题:
     //    function Fn(num) {
